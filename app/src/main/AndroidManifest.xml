@@ -12,13 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MainActivity">
+
+        <activity android:name="pub.war.navigationexample.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <!-- This is added to handle a deep link -->
+            <nav-graph android:value="@navigation/list" />
         </activity>
+
     </application>
 
 </manifest>
