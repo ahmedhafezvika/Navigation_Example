@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home"
-    app:startDestination="@+id/titleScreen">
+    app:startDestination="@+id/titleScreen"
+    tools:ignore="UnusedNavigation">
 
     <fragment
         android:id="@+id/titleScreen"
@@ -13,7 +14,7 @@
         tools:layout="@layout/fragment_title">
         <action
             android:id="@+id/action_title_to_about"
-            app:destination="@id/register"
+            app:destination="@id/form"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"
             app:enterAnim="@anim/slide_in_right"
@@ -25,22 +26,5 @@
 <!--        android:label="@string/title_about"-->
 <!--        tools:layout="@layout/fragment_title"/>-->
 
-    <fragment
-        android:id="@+id/register"
-        android:name="pub.war.navigationexample.formscreen.Register"
-        android:label="@string/title_register"
-        tools:layout="@layout/fragment_register">
-        <action
-            android:id="@+id/action_register_to_registered"
-            app:destination="@id/registered"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left" />
-    </fragment>
-    <fragment
-        android:id="@+id/registered"
-        android:name="pub.war.navigationexample.formscreen.Registered"
-        android:label="Registered"
-        tools:layout="@layout/fragment_registered"/>
+    <include app:graph="@navigation/form" />
 </navigation>

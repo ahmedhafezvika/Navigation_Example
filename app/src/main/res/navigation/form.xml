@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/form"
-    app:startDestination="@id/register">
+    app:startDestination="@id/register"
+    tools:ignore="UnusedNavigation">
 
     <fragment
         android:id="@+id/register"
